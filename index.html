@@ -14,116 +14,11 @@
     <!-- Overlay -->
     <div id="menuOverlay" class="fixed inset-0 bg-black/40 opacity-0 invisible transition-all duration-300 z-40"></div>
 
-    <!-- Side Menu -->
-    <aside id="sideMenu"
-        class="fixed top-0 left-0 h-full w-[320px] bg-[#f2711f] text-white shadow-2xl -translate-x-full transition-transform duration-300 z-50 overflow-y-auto">
+    <!-- Sidebar Include -->
+    <div id="sidebar"></div>
 
-        <div class="flex items-center justify-between px-6 py-5 border-b border-white/20">
-            <h3 class="text-2xl font-semibold uppercase tracking-wide">Menu</h3>
-            <button id="closeMenu" class="text-3xl leading-none hover:scale-110 transition">
-                &times;
-            </button>
-        </div>
-
-        <nav class="px-6 py-8">
-            <ul class="space-y-4 text-lg font-semibold uppercase">
-
-                <li><a href="#" class="block hover:text-black transition">Home</a></li>
-                <li><a href="#" class="block hover:text-black transition">About Us</a></li>
-
-                <!-- Product -->
-                <li>
-                    <button onclick="toggleMenu('productMenu')"
-                        class="w-full flex items-center justify-between hover:text-black transition">
-                        <span>Product</span>
-                        <span>+</span>
-                    </button>
-
-                    <ul id="productMenu" class="hidden mt-3 ml-4 space-y-3 text-base font-medium normal-case">
-                        <li><a href="#" class="block hover:text-black transition">Rolling Paper</a></li>
-
-                        <!-- Hookah -->
-                        <li>
-                            <button onclick="toggleMenu('hookahMenu')"
-                                class="w-full flex items-center justify-between hover:text-black transition">
-                                <span>Hookah</span>
-                                <span>+</span>
-                            </button>
-                            <ul id="hookahMenu" class="hidden mt-2 ml-4 space-y-2">
-                                <li><a href="#" class="block hover:text-black transition">Single Flavors</a></li>
-                                <li><a href="#" class="block hover:text-black transition">Make your own</a></li>
-                                <li><a href="#" class="block hover:text-black transition">Fruit Chillum</a></li>
-                                <li><a href="#" class="block hover:text-black transition">Special Combo</a></li>
-                                <li><a href="#" class="block hover:text-black transition">Smokey Special</a></li>
-                            </ul>
-                        </li>
-
-                        <li><a href="#" class="block hover:text-black transition">Cigarettes</a></li>
-                        <li><a href="#" class="block hover:text-black transition">Beverage</a></li>
-
-                        <!-- Munchies -->
-                        <li>
-                            <button onclick="toggleMenu('munchiesMenu')"
-                                class="w-full flex items-center justify-between hover:text-black transition">
-                                <span>Munchies</span>
-                                <span>+</span>
-                            </button>
-                            <ul id="munchiesMenu" class="hidden mt-2 ml-4 space-y-2">
-                                <li><a href="#" class="block hover:text-black transition">Chips</a></li>
-                                <li><a href="#" class="block hover:text-black transition">Popcorn</a></li>
-                            </ul>
-                        </li>
-
-                        <!-- Extra Chillum -->
-                        <li>
-                            <button onclick="toggleMenu('extraChillumMenu')"
-                                class="w-full flex items-center justify-between hover:text-black transition">
-                                <span>Extra Chillum</span>
-                                <span>+</span>
-                            </button>
-                            <ul id="extraChillumMenu" class="hidden mt-2 ml-4 space-y-2">
-                                <li><a href="#" class="block hover:text-black transition">Single Flavors</a></li>
-                                <li><a href="#" class="block hover:text-black transition">Special Combo</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-
-                <li><a href="#" class="block hover:text-black transition">Our Policy</a></li>
-                <li><a href="#" class="block hover:text-black transition">My Account</a></li>
-            </ul>
-        </nav>
-    </aside>
-
-    <!-- Header -->
-    <header>
-        <nav class="max-w-[85%] mx-auto pt-6">
-            <div class="flex items-center justify-between">
-
-                <!-- menu icon & name-->
-                <button id="openMenu" class="flex items-center gap-2 text-[#f2711f]">
-                    <i class="hgi hgi-stroke hgi-menu-06 text-2xl font-bold"></i>
-                    <div class="hidden md:block">
-                        <h4 class="text-2xl uppercase font-semibold">Menu</h4>
-                    </div>
-                </button>
-
-                <div class="flex items-center gap-4">
-                    <div class="flex items-center text-xl gap-2 hidden md:block">
-                        <i class="hgi hgi-stroke hgi-call-02 hover:text-[#f2711f]"></i>
-                        <span>9903191031</span>
-                    </div>
-                    <div class="flex items-center gap-2 text-xl">
-                        <i class="hgi hgi-stroke hgi-facebook-02 hover:text-[#f2711f]"></i>
-                        <i class="hgi hgi-stroke hgi-instagram hover:text-[#f2711f]"></i>
-                    </div>
-                    <div class="text-xl">
-                        <i class="hgi hgi-stroke hgi-shopping-cart-02 hover:text-[#f2711f]"></i>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <!-- Header Include -->
+    <div id="header"></div>
 
     <!-- Hero Section -->
     <section class="max-w-[85%] mx-auto h-[100vh] flex items-center py-3">
@@ -226,83 +121,62 @@
     </section>
 
 
-
-    <footer class="max-w-[85%] mx-auto bg-black text-white mt-20">
-        <div class="grid grid-cols-1 md:grid-cols-3">
-
-            <!-- Left -->
-            <div class="px-8 py-5 md:py-12 border-b md:border-b-0 md:border-r border-white/10">
-                <h4 class="text-2xl md:text-3xl font-light uppercase tracking-wide text-white/90">
-                    © Smokey Affairs.2019
-                </h4>
-            </div>
-
-            <!-- Center -->
-            <div class="px-8 py-5 md:py-12 border-b md:border-b-0 md:border-r border-white/10">
-                <div class="space-y-2 text-xl md:text-2xl text-white/85">
-                    <p>Call : <a href="tel:+919903191031" class="hover:text-[#f2711f]">+91 99031 91031</a></p>
-                    <p>Email : <a href="mailto:info@smokeyaffairs.com"
-                            class="hover:text-[#f2711f]">info@smokeyaffairs.com</a></p>
-                </div>
-            </div>
-
-            <!-- Right -->
-            <div class="px-8 py-5 md:py-12">
-                <div class="text-center">
-                    <h5 class="text-2xl text-white/90 mb-4">Connect with us</h5>
-                    <div class="flex items-center justify-center gap-5 text-2xl">
-                        <a href="#" class="hover:text-[#f2711f]">
-                            <i class="hgi hgi-stroke hgi-facebook-02"></i>
-                        </a>
-                        <a href="#" class="hover:text-[#f2711f]">
-                            <i class="hgi hgi-stroke hgi-instagram"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Bottom Warning -->
-        <div class="border-t border-white/10 px-8 py-4">
-            <p class="text-[#f2a33a] text-lg md:text-2xl text-center">
-                *Tobacco causes cancer
-            </p>
-        </div>
-    </footer>
+    <!-- Footer Include -->
+    <div id="footer"></div>
 
 
     <!-- script -->
-    <script>
-        const openMenu = document.getElementById("openMenu");
-        const closeMenu = document.getElementById("closeMenu");
-        const sideMenu = document.getElementById("sideMenu");
-        const menuOverlay = document.getElementById("menuOverlay");
 
-        function showMenu() {
-            sideMenu.classList.remove("-translate-x-full");
-            menuOverlay.classList.remove("opacity-0", "invisible");
-            menuOverlay.classList.add("opacity-100", "visible");
+
+    <script>
+        async function loadIncludes() {
+            try {
+                const sidebar = await fetch('./includes/sidebar.html');
+                document.getElementById('sidebar').innerHTML = await sidebar.text();
+
+                const header = await fetch('./includes/header.html');
+                document.getElementById('header').innerHTML = await header.text();
+
+                const footer = await fetch('./includes/footer.html');
+                document.getElementById('footer').innerHTML = await footer.text();
+
+                // sidebar js after load
+                const openMenu = document.getElementById("openMenu");
+                const closeMenu = document.getElementById("closeMenu");
+                const sideMenu = document.getElementById("sideMenu");
+                const menuOverlay = document.getElementById("menuOverlay");
+
+                if (openMenu && closeMenu && sideMenu && menuOverlay) {
+                    function showMenu() {
+                        sideMenu.classList.remove("-translate-x-full");
+                        menuOverlay.classList.remove("opacity-0", "invisible");
+                        menuOverlay.classList.add("opacity-100", "visible");
+                    }
+
+                    function hideMenu() {
+                        sideMenu.classList.add("-translate-x-full");
+                        menuOverlay.classList.add("opacity-0", "invisible");
+                        menuOverlay.classList.remove("opacity-100", "visible");
+                    }
+
+                    openMenu.addEventListener("click", showMenu);
+                    closeMenu.addEventListener("click", hideMenu);
+                    menuOverlay.addEventListener("click", hideMenu);
+                }
+            } catch (error) {
+                console.error("Include loading error:", error);
+            }
         }
 
-        function hideMenu() {
-            sideMenu.classList.add("-translate-x-full");
-            menuOverlay.classList.add("opacity-0", "invisible");
-            menuOverlay.classList.remove("opacity-100", "visible");
-        }
+        loadIncludes();
 
-        openMenu.addEventListener("click", showMenu);
-        closeMenu.addEventListener("click", hideMenu);
-        menuOverlay.addEventListener("click", hideMenu);
-    </script>
-
-    <!-- sub product scriprt -->
-    <script>
         function toggleMenu(id) {
             const menu = document.getElementById(id);
-            menu.classList.toggle("hidden");
+            if (menu) {
+                menu.classList.toggle("hidden");
+            }
         }
     </script>
-
 </body>
 
 </html>
