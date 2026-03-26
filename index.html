@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" />
+</head>
+
+<body class="bg-[url('./images/bg.jpg')] bg-cover bg-center bg-no-repeat min-h-screen relative overflow-x-hidden">
+
+    <!-- Overlay -->
+    <div id="menuOverlay" class="fixed inset-0 bg-black/40 opacity-0 invisible transition-all duration-300 z-40"></div>
+
+    <!-- Side Menu -->
+    <aside id="sideMenu"
+        class="fixed top-0 left-0 h-full w-[320px] bg-[#f2711f] text-white shadow-2xl -translate-x-full transition-transform duration-300 z-50 overflow-y-auto">
+
+        <div class="flex items-center justify-between px-6 py-5 border-b border-white/20">
+            <h3 class="text-2xl font-semibold uppercase tracking-wide">Menu</h3>
+            <button id="closeMenu" class="text-3xl leading-none hover:scale-110 transition">
+                &times;
+            </button>
+        </div>
+
+        <nav class="px-6 py-8">
+            <ul class="space-y-4 text-lg font-semibold uppercase">
+
+                <li><a href="#" class="block hover:text-black transition">Home</a></li>
+                <li><a href="#" class="block hover:text-black transition">About Us</a></li>
+
+                <!-- Product -->
+                <li>
+                    <button onclick="toggleMenu('productMenu')"
+                        class="w-full flex items-center justify-between hover:text-black transition">
+                        <span>Product</span>
+                        <span>+</span>
+                    </button>
+
+                    <ul id="productMenu" class="hidden mt-3 ml-4 space-y-3 text-base font-medium normal-case">
+                        <li><a href="#" class="block hover:text-black transition">Rolling Paper</a></li>
+
+                        <!-- Hookah -->
+                        <li>
+                            <button onclick="toggleMenu('hookahMenu')"
+                                class="w-full flex items-center justify-between hover:text-black transition">
+                                <span>Hookah</span>
+                                <span>+</span>
+                            </button>
+                            <ul id="hookahMenu" class="hidden mt-2 ml-4 space-y-2">
+                                <li><a href="#" class="block hover:text-black transition">Single Flavors</a></li>
+                                <li><a href="#" class="block hover:text-black transition">Make your own</a></li>
+                                <li><a href="#" class="block hover:text-black transition">Fruit Chillum</a></li>
+                                <li><a href="#" class="block hover:text-black transition">Special Combo</a></li>
+                                <li><a href="#" class="block hover:text-black transition">Smokey Special</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="#" class="block hover:text-black transition">Cigarettes</a></li>
+                        <li><a href="#" class="block hover:text-black transition">Beverage</a></li>
+
+                        <!-- Munchies -->
+                        <li>
+                            <button onclick="toggleMenu('munchiesMenu')"
+                                class="w-full flex items-center justify-between hover:text-black transition">
+                                <span>Munchies</span>
+                                <span>+</span>
+                            </button>
+                            <ul id="munchiesMenu" class="hidden mt-2 ml-4 space-y-2">
+                                <li><a href="#" class="block hover:text-black transition">Chips</a></li>
+                                <li><a href="#" class="block hover:text-black transition">Popcorn</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Extra Chillum -->
+                        <li>
+                            <button onclick="toggleMenu('extraChillumMenu')"
+                                class="w-full flex items-center justify-between hover:text-black transition">
+                                <span>Extra Chillum</span>
+                                <span>+</span>
+                            </button>
+                            <ul id="extraChillumMenu" class="hidden mt-2 ml-4 space-y-2">
+                                <li><a href="#" class="block hover:text-black transition">Single Flavors</a></li>
+                                <li><a href="#" class="block hover:text-black transition">Special Combo</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="#" class="block hover:text-black transition">Our Policy</a></li>
+                <li><a href="#" class="block hover:text-black transition">My Account</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Header -->
+    <header>
+        <nav class="max-w-[85%] mx-auto pt-6">
+            <div class="flex items-center justify-between">
+
+                <!-- menu icon & name-->
+                <button id="openMenu" class="flex items-center gap-2 text-[#f2711f]">
+                    <i class="hgi hgi-stroke hgi-menu-06 text-2xl font-bold"></i>
+                    <div class="hidden md:block">
+                        <h4 class="text-2xl uppercase font-semibold">Menu</h4>
+                    </div>
+                </button>
+
+                <div class="flex items-center gap-4">
+                    <div class="flex items-center text-xl gap-2 hidden md:block">
+                        <i class="hgi hgi-stroke hgi-call-02 hover:text-[#f2711f]"></i>
+                        <span>9903191031</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-xl">
+                        <i class="hgi hgi-stroke hgi-facebook-02 hover:text-[#f2711f]"></i>
+                        <i class="hgi hgi-stroke hgi-instagram hover:text-[#f2711f]"></i>
+                    </div>
+                    <div class="text-xl">
+                        <i class="hgi hgi-stroke hgi-shopping-cart-02 hover:text-[#f2711f]"></i>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="max-w-[85%] mx-auto h-[100vh] flex items-center py-3">
+        <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-16 w-full">
+
+            <!-- Left Side -->
+            <div class="flex items-center flex-col md:flex-row justify-center lg:justify-start gap-6">
+                <img src="./images/smokey-logo.png" alt="Smokey Affair mascot"
+                    class="w-40 md:w-48 lg:w-52 object-contain">
+
+                <div class="text-center lg:text-left">
+                    <h1
+                        class="text-5xl md:text-6xl lg:text-7xl leading-[0.95] font-light uppercase tracking-[4px] text-[#222]">
+                        Smokey <br> Affairs
+                    </h1>
+
+                    <div
+                        class="mt-4 flex flex-wrap items-center justify-center lg:justify-start gap-2 text-[#2a2a2a] uppercase font-extrabold text-base md:text-lg">
+                        <span>Order.</span>
+                        <span>Chill.</span>
+                        <span>Crave.</span>
+                        <span>Repeat.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side -->
+            <div class="text-center lg:text-left">
+                <h2 class="text-[70px] md:text-[90px] lg:text-[110px] leading-none font-light text-[#f2711f]">
+                    hello!
+                </h2>
+
+                <div class="mt-4 space-y-2 text-[#8d8d8d] text-3xl md:text-4xl lg:text-5xl font-light leading-tight">
+                    <p>fruit chillum <span class="text-[#f2711f]">.</span> hookah</p>
+                    <p>cigarettes <span class="text-[#f2711f]">.</span> beverage</p>
+                    <p>munchies <span class="text-[#f2711f]">.</span> chillum</p>
+                </div>
+
+                <div class="mt-8 flex items-center justify-center lg:justify-start gap-6 text-4xl">
+                    <span>🍊</span>
+                    <span>🚬</span>
+                    <span>🍟</span>
+                    <span>🥤</span>
+                    <span>🍜</span>
+                    <span>🪔</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- How to Order -->
+    <section class="max-w-[85%] mx-auto py-20">
+        <h4 class="text-4xl font-semibold text-start mb-10 text-[#f2711f]">How to Order</h4>
+        <div class="rounded-3xl overflow-hidden shadow-lg">
+            <img src="./images/video.jpg" alt="how to order" class="w-full h-auto object-cover">
+        </div>
+    </section>
+
+    <section class="max-w-[85%] mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+            <!-- Card 1 -->
+            <div
+                class="flex flex-col items-center justify-center text-center gap-3 px-6 py-8 border-4 border-[#d7d7d7] rounded-[2rem] min-h-[180px] bg-transparent">
+                <img src="./images/flavor.png" class="h-[55px] w-[55px] object-contain" alt="Choose Your Flavor">
+                <h6 class="text-2xl md:text-[1.5rem] font-bold uppercase leading-tight text-black">
+                    Choose Your <br> Flavor
+                </h6>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+                class="flex flex-col items-center justify-center text-center gap-3 px-6 py-8 border-4 border-[#d7d7d7] rounded-[2rem] min-h-[180px] bg-transparent">
+                <img src="./images/smokey.png" class="h-[55px] w-[55px] object-contain" alt="Give Us A Call">
+                <h6 class="text-2xl md:text-[1.5rem] font-bold uppercase leading-tight text-black">
+                    Give Us A Call
+                </h6>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+                class="flex flex-col items-center justify-center text-center gap-3 px-6 py-8 border-4 border-[#d7d7d7] rounded-[2rem] min-h-[180px] bg-transparent">
+                <img src="./images/scotter.png" class="h-[55px] w-[55px] object-contain" alt="Delivery">
+                <h6 class="text-2xl md:text-[1.5rem] font-bold uppercase leading-tight text-black">
+                    Delivery
+                </h6>
+            </div>
+
+            <!-- Card 4 -->
+            <div
+                class="flex flex-col items-center justify-center text-center gap-3 px-6 py-8 border-4 border-[#d7d7d7] rounded-[2rem] min-h-[180px] bg-transparent">
+                <img src="./images/catering.png" class="h-[55px] w-[55px] object-contain" alt="Catering">
+                <h6 class="text-2xl md:text-[1.5rem] font-bold uppercase leading-tight text-black">
+                    Catering
+                </h6>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <footer class="max-w-[85%] mx-auto bg-black text-white mt-20">
+        <div class="grid grid-cols-1 md:grid-cols-3">
+
+            <!-- Left -->
+            <div class="px-8 py-5 md:py-12 border-b md:border-b-0 md:border-r border-white/10">
+                <h4 class="text-2xl md:text-3xl font-light uppercase tracking-wide text-white/90">
+                    © Smokey Affairs.2019
+                </h4>
+            </div>
+
+            <!-- Center -->
+            <div class="px-8 py-5 md:py-12 border-b md:border-b-0 md:border-r border-white/10">
+                <div class="space-y-2 text-xl md:text-2xl text-white/85">
+                    <p>Call : <a href="tel:+919903191031" class="hover:text-[#f2711f]">+91 99031 91031</a></p>
+                    <p>Email : <a href="mailto:info@smokeyaffairs.com"
+                            class="hover:text-[#f2711f]">info@smokeyaffairs.com</a></p>
+                </div>
+            </div>
+
+            <!-- Right -->
+            <div class="px-8 py-5 md:py-12">
+                <div class="text-center">
+                    <h5 class="text-2xl text-white/90 mb-4">Connect with us</h5>
+                    <div class="flex items-center justify-center gap-5 text-2xl">
+                        <a href="#" class="hover:text-[#f2711f]">
+                            <i class="hgi hgi-stroke hgi-facebook-02"></i>
+                        </a>
+                        <a href="#" class="hover:text-[#f2711f]">
+                            <i class="hgi hgi-stroke hgi-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Warning -->
+        <div class="border-t border-white/10 px-8 py-4">
+            <p class="text-[#f2a33a] text-lg md:text-2xl text-center">
+                *Tobacco causes cancer
+            </p>
+        </div>
+    </footer>
+
+
+    <!-- script -->
+    <script>
+        const openMenu = document.getElementById("openMenu");
+        const closeMenu = document.getElementById("closeMenu");
+        const sideMenu = document.getElementById("sideMenu");
+        const menuOverlay = document.getElementById("menuOverlay");
+
+        function showMenu() {
+            sideMenu.classList.remove("-translate-x-full");
+            menuOverlay.classList.remove("opacity-0", "invisible");
+            menuOverlay.classList.add("opacity-100", "visible");
+        }
+
+        function hideMenu() {
+            sideMenu.classList.add("-translate-x-full");
+            menuOverlay.classList.add("opacity-0", "invisible");
+            menuOverlay.classList.remove("opacity-100", "visible");
+        }
+
+        openMenu.addEventListener("click", showMenu);
+        closeMenu.addEventListener("click", hideMenu);
+        menuOverlay.addEventListener("click", hideMenu);
+    </script>
+
+    <!-- sub product scriprt -->
+    <script>
+        function toggleMenu(id) {
+            const menu = document.getElementById(id);
+            menu.classList.toggle("hidden");
+        }
+    </script>
+
+</body>
+
+</html>
