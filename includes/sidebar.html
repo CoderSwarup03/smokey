@@ -9,11 +9,12 @@
 
 <body>
     <!-- Overlay -->
-    <div id="menuOverlay" class="fixed inset-0 bg-black/40 opacity-0 invisible transition-all duration-300 z-40"></div>
+    <div id="menuOverlay" class="fixed inset-0 bg-black/40 opacity-0 invisible transition-all duration-300 z-[90]">
+    </div>
 
     <!-- Side Menu -->
     <aside id="sideMenu"
-        class="fixed top-0 left-0 h-full w-[320px] bg-[#f2711f] text-white shadow-2xl -translate-x-full transition-transform duration-300 z-50 overflow-y-auto">
+        class="fixed top-0 left-0 h-full w-[320px] bg-[#f2711f] text-white shadow-2xl -translate-x-full transition-transform duration-300 z-[100] overflow-y-auto">
 
         <div class="flex items-center justify-between px-6 py-5 border-b border-white/20">
             <h3 class="text-2xl font-semibold uppercase tracking-wide">Menu</h3>
@@ -28,7 +29,6 @@
                 <li><a href="../index.html" class="block hover:text-black transition">Home</a></li>
                 <li><a href="#" class="block hover:text-black transition">About Us</a></li>
 
-                <!-- Product -->
                 <li>
                     <button onclick="toggleMenu('productMenu')"
                         class="w-full flex items-center justify-between hover:text-black transition">
@@ -39,7 +39,6 @@
                     <ul id="productMenu" class="hidden mt-3 ml-4 space-y-3 text-base font-medium normal-case">
                         <li><a href="../rollpaper.html" class="block hover:text-black transition">Rolling Paper</a></li>
 
-                        <!-- Hookah -->
                         <li>
                             <button onclick="toggleMenu('hookahMenu')"
                                 class="w-full flex items-center justify-between hover:text-black transition">
@@ -47,18 +46,17 @@
                                 <span>+</span>
                             </button>
                             <ul id="hookahMenu" class="hidden mt-2 ml-4 space-y-2">
-                                <li><a href="#" class="block hover:text-black transition">Single Flavors</a></li>
+                                <li><a href="../singleflavor.html" class="block hover:text-black transition">Single Flavors</a></li>
                                 <li><a href="#" class="block hover:text-black transition">Make your own</a></li>
-                                <li><a href="#" class="block hover:text-black transition">Fruit Chillum</a></li>
-                                <li><a href="#" class="block hover:text-black transition">Special Combo</a></li>
-                                <li><a href="#" class="block hover:text-black transition">Smokey Special</a></li>
+                                <li><a href="../fruitschillam.html" class="block hover:text-black transition">Fruit Chillum</a></li>
+                                <li><a href="../specialcombo.html" class="block hover:text-black transition">Special Combo</a></li>
+                                <li><a href="../smokeyspl.html" class="block hover:text-black transition">Smokey Special</a></li>
                             </ul>
                         </li>
 
-                        <li><a href="#" class="block hover:text-black transition">Cigarettes</a></li>
-                        <li><a href="#" class="block hover:text-black transition">Beverage</a></li>
+                        <li><a href="../cigarests.html" class="block hover:text-black transition">Cigarettes</a></li>
+                        <li><a href="../bravages.html" class="block hover:text-black transition">Beverage</a></li>
 
-                        <!-- Munchies -->
                         <li>
                             <button onclick="toggleMenu('munchiesMenu')"
                                 class="w-full flex items-center justify-between hover:text-black transition">
@@ -66,12 +64,11 @@
                                 <span>+</span>
                             </button>
                             <ul id="munchiesMenu" class="hidden mt-2 ml-4 space-y-2">
-                                <li><a href="#" class="block hover:text-black transition">Chips</a></li>
-                                <li><a href="#" class="block hover:text-black transition">Popcorn</a></li>
+                                <li><a href="../chips.html" class="block hover:text-black transition">Chips</a></li>
+                                <li><a href="../popcorn.html" class="block hover:text-black transition">Popcorn</a></li>
                             </ul>
                         </li>
 
-                        <!-- Extra Chillum -->
                         <li>
                             <button onclick="toggleMenu('extraChillumMenu')"
                                 class="w-full flex items-center justify-between hover:text-black transition">
@@ -86,8 +83,6 @@
                     </ul>
                 </li>
 
-                <li><a href="#" class="block hover:text-black transition">Our Policy</a></li>
-                <li><a href="#" class="block hover:text-black transition">My Account</a></li>
             </ul>
         </nav>
     </aside>

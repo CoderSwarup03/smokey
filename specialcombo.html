@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" />
+</head>
+
+<body class="bg-[url('./images/bg.jpg')] bg-cover bg-center bg-no-repeat min-h-screen relative overflow-x-hidden">
+
+    <!-- Sidebar Include -->
+    <div id="sidebar"></div>
+
+    <!-- Header Include -->
+    <div id="header"></div>
+
+    <!-- main content -->
+    <main class=" max-w-[85%] mx-auto mt-10">
+        <section class="py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <!-- Heading -->
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <span
+                        class="inline-block px-4 py-1.5 rounded-full bg-orange-100 text-orange-600 text-sm font-semibold tracking-wide uppercase">
+                        Premium Collection
+                    </span>
+                    <h2 class="mt-4 text-3xl md:text-4xl font-bold text-gray-900">
+                        Special Combo
+                    </h2>
+                    <p class="mt-4 text-gray-600 text-base md:text-lg leading-7">
+                        Explore our exclusive special combo collection, bringing together premium hookah essentials in
+                        one value-packed set. Enjoy the perfect mix of flavor, style, and convenience with combos
+                        designed for a smooth and satisfying experience.
+                    </p>
+                </div>
+
+                <!-- Product Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                    <!-- Card 1 -->
+                    <div
+                        class="group bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+                        <div class="bg-gray-50 p-4 flex items-center justify-center h-[280px]">
+                            <img src="./images/splcombo1.webp" alt="Afzal Hookah Premium Pre-Cut Foils"
+                                class="max-h-full object-contain group-hover:scale-105 transition duration-300 rounded-2xl">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-semibold text-gray-900 leading-6">
+                                Flame Red Luxury Designer Hookah Set
+                            </h3>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div
+                        class="group bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+                        <div class="bg-gray-50 p-4 flex items-center justify-center h-[280px]">
+                            <img src="./images/splcombo2.webp" alt="Natural Rolling Paper Combo Pack"
+                                class="max-h-full object-contain group-hover:scale-105 transition duration-300 rounded-2xl">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-semibold text-gray-900 leading-6">
+                                Matte Black Modern Tower Hookah Edition
+                            </h3>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div
+                        class="group bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+                        <div class="bg-gray-50 p-4 flex items-center justify-center h-[280px]">
+                            <img src="./images/splcombo3.webp" alt="Natural Rolling Paper Combo Pack"
+                                class="max-h-full object-contain group-hover:scale-105 transition duration-300 rounded-2xl">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-semibold text-gray-900 leading-6">
+                                Elite Black Glass Base Premium Hookah
+                            </h3>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div
+                        class="group bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+                        <div class="bg-gray-50 p-4 flex items-center justify-center h-[280px]">
+                            <img src="./images/splcombo4.webp" alt="OCB Slim Premium Rolling Paper"
+                                class="max-h-full object-contain group-hover:scale-105 transition duration-300 rounded-2xl">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-semibold text-gray-900 leading-6">
+                                Royal Gold Classic Glass Hookah Set
+                            </h3>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div
+                        class="group bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+                        <div class="bg-gray-50 p-4 flex items-center justify-center h-[280px]">
+                            <img src="./images/splcombo5.webp" alt="Stash-Pro Burning Desire Premium Papers"
+                                class="max-h-full object-contain group-hover:scale-105 transition duration-300 rounded-2xl">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-semibold text-gray-900 leading-6">
+                                Compact White Frame Mini Hookah Kit
+                            </h3>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- Footer Include -->
+    <div id="footer"></div>
+
+    <!-- script -->
+    <script>
+        async function loadIncludes() {
+            try {
+                const sidebar = await fetch('./includes/sidebar.html');
+                document.getElementById('sidebar').innerHTML = await sidebar.text();
+
+                const header = await fetch('./includes/header.html');
+                document.getElementById('header').innerHTML = await header.text();
+
+                const footer = await fetch('./includes/footer.html');
+                document.getElementById('footer').innerHTML = await footer.text();
+
+                // sidebar js after load
+                const openMenu = document.getElementById("openMenu");
+                const closeMenu = document.getElementById("closeMenu");
+                const sideMenu = document.getElementById("sideMenu");
+                const menuOverlay = document.getElementById("menuOverlay");
+
+                if (openMenu && closeMenu && sideMenu && menuOverlay) {
+                    function showMenu() {
+                        sideMenu.classList.remove("-translate-x-full");
+                        menuOverlay.classList.remove("opacity-0", "invisible");
+                        menuOverlay.classList.add("opacity-100", "visible");
+                    }
+
+                    function hideMenu() {
+                        sideMenu.classList.add("-translate-x-full");
+                        menuOverlay.classList.add("opacity-0", "invisible");
+                        menuOverlay.classList.remove("opacity-100", "visible");
+                    }
+
+                    openMenu.addEventListener("click", showMenu);
+                    closeMenu.addEventListener("click", hideMenu);
+                    menuOverlay.addEventListener("click", hideMenu);
+                }
+            } catch (error) {
+                console.error("Include loading error:", error);
+            }
+        }
+
+        loadIncludes();
+
+        function toggleMenu(id) {
+            const menu = document.getElementById(id);
+            if (menu) {
+                menu.classList.toggle("hidden");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
